@@ -5,7 +5,15 @@
 
 `mpljourney` is a small package with datasets used in the [Matplotlib Journey online course](https://www.matplotlib-journey.com/).
 
-The datasets are either pandas or geopandas dataframes. Geopanda dataframes are mainly used to provide polygons for drawing maps.
+The datasets are either pandas or geopandas dataframes. Geopandas dataframes are mainly used to provide polygons for drawing maps.
+
+<br><br>
+
+## Installation
+
+```bash
+pip install git+https://github.com/JosephBARBIERDARNAL/mpljourney.git
+```
 
 <br><br>
 
@@ -21,6 +29,7 @@ The datasets are either pandas or geopandas dataframes. Geopanda dataframes are 
 from mpljourney import load_dataset
 
 df = load_dataset("accident-london")
+df.head(10)
 ```
 
 ![](img/accident-london.png)
@@ -35,6 +44,7 @@ df = load_dataset("accident-london")
 from mpljourney import load_dataset
 
 df = load_dataset("CO2")
+df.head(10)
 ```
 
 ![](img/CO2.png)
@@ -49,6 +59,7 @@ df = load_dataset("CO2")
 from mpljourney import load_dataset
 
 df = load_dataset("earthquakes")
+df.head(10)
 ```
 
 ![](img/earthquakes.png)
@@ -63,6 +74,7 @@ df = load_dataset("earthquakes")
 from mpljourney import load_dataset
 
 df = load_dataset("economic")
+df.head(10)
 ```
 
 ![](img/economic.png)
@@ -77,6 +89,7 @@ df = load_dataset("economic")
 from mpljourney import load_dataset
 
 df = load_dataset("footprint")
+df.head(10)
 ```
 
 ![](img/footprint.png)
@@ -91,6 +104,7 @@ df = load_dataset("footprint")
 from mpljourney import load_dataset
 
 df = load_dataset("game-sales")
+df.head(10)
 ```
 
 ![](img/game-sales.png)
@@ -105,6 +119,7 @@ The `geometry` column with the polygons is hidden.
 from mpljourney import load_dataset
 
 df = load_dataset("london")
+df.head(10)
 ```
 
 ![](img/london.png)
@@ -119,6 +134,7 @@ df = load_dataset("london")
 from mpljourney import load_dataset
 
 df = load_dataset("mariokart")
+df.head(10)
 ```
 
 ![](img/mariokart.png)
@@ -133,6 +149,7 @@ df = load_dataset("mariokart")
 from mpljourney import load_dataset
 
 df = load_dataset("natural-disasters")
+df.head(10)
 ```
 
 ![](img/natural-disasters.png)
@@ -147,6 +164,7 @@ df = load_dataset("natural-disasters")
 from mpljourney import load_dataset
 
 df = load_dataset("netflix")
+df.head(10)
 ```
 
 ![](img/netflix.png)
@@ -161,6 +179,7 @@ df = load_dataset("netflix")
 from mpljourney import load_dataset
 
 df = load_dataset("newyork-airbnb")
+df.head(10)
 ```
 
 ![](img/newyork-airbnb.png)
@@ -175,6 +194,7 @@ The `geometry` column with the polygons is hidden.
 from mpljourney import load_dataset
 
 df = load_dataset("newyork")
+df.head(10)
 ```
 
 ![](img/newyork.png)
@@ -189,6 +209,7 @@ df = load_dataset("newyork")
 from mpljourney import load_dataset
 
 df = load_dataset("storms")
+df.head(10)
 ```
 
 ![](img/storms.png)
@@ -203,6 +224,7 @@ df = load_dataset("storms")
 from mpljourney import load_dataset
 
 df = load_dataset("ufo")
+df.head(10)
 ```
 
 ![](img/ufo.png)
@@ -217,6 +239,7 @@ The `geometry` column with the polygons is hidden.
 from mpljourney import load_dataset
 
 df = load_dataset("us-counties")
+df.head(10)
 ```
 
 ![](img/us-counties.png)
@@ -231,6 +254,7 @@ df = load_dataset("us-counties")
 from mpljourney import load_dataset
 
 df = load_dataset("walks")
+df.head(10)
 ```
 
 ![](img/walks.png)
@@ -245,6 +269,7 @@ df = load_dataset("walks")
 from mpljourney import load_dataset
 
 df = load_dataset("wine")
+df.head(10)
 ```
 
 ![](img/wine.png)
@@ -259,6 +284,7 @@ The `geometry` column with the polygons is hidden.
 from mpljourney import load_dataset
 
 df = load_dataset("world")
+df.head(10)
 ```
 
 ![](img/world.png)
