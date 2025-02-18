@@ -1,0 +1,2 @@
+include mpljourney/datasets/*.csv
+include mpljourney/datasets/*.geojson

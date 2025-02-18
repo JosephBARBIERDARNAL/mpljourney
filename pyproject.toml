@@ -11,8 +11,11 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "great-tables>=0.16.1",
+    "pillow>=11.1.0",
     "pre-commit>=4.1.0",
     "pytest>=8.3.4",
+    "selenium>=4.28.1",
 ]
 
 [tool.setuptools]
