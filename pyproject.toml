@@ -1,0 +1,19 @@
+[project]
+name = "mpljourney"
+version = "0.1.0"
+description = "Datasets for matplotlib-journey.com"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "geopandas>=1.0.1",
+    "pandas>=2.2.3",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+]
+
+[tool.setuptools]
+include-package-data = true
