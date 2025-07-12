@@ -8,3 +8,4 @@ import pytest
 def test_load_dataset(dataset_name):
     df = load_dataset(dataset_name)
     assert isinstance(df, (pd.DataFrame, gpd.GeoDataFrame))
+    assert len(df) >= 5

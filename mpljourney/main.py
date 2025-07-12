@@ -3,6 +3,15 @@ from narwhals.typing import Frame
 
 from typing import Literal
 
+import warnings
+
+warnings.filterwarnings(
+    "ignore",
+    message=".*The 'shapely.geos' module is deprecated.*",
+    category=DeprecationWarning,
+)
+
+
 ALL_DATASETS: list[str] = [
     "accident-london",
     "CO2",
