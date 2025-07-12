@@ -1,6 +1,6 @@
-site_name: package_name
-site_url: https://your_name.github.io/package_name/
-repo_url: https://github.com/your_name/package_name
+site_name: mpljourney
+site_url: https://JosephBARBIERDARNAL.github.io/mpljourney/
+repo_url: https://github.com/JosephBARBIERDARNAL/mpljourney
 
 theme:
   name: material

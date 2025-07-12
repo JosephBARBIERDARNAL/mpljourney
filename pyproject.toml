@@ -1,12 +1,12 @@
 [project]
-name = "package_name"
-description = "Description"
+name = "mpljourney"
+description = "A collection of cool datasets distributed in a Python package."
 version = "0.1.0"
 license = "MIT"
 license-files = ["LICENSE"]
-keywords = ["a", "list", "of", "keywords"]
+keywords = ["datasets", "data", "exploration", "matplotlib", "journey"]
 authors = [
-  { name="your_name", email="your_name@mail.com" },
+  { name="Joseph Barbier", email="joseph.barbierdarnal@mail.com" },
 ]
 readme = "README.md"
 requires-python = ">=3.9"
@@ -15,7 +15,14 @@ classifiers = [
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha"
 ]
-dependencies = []
+dependencies = [
+    "narwhals>=1.0.0",
+]
+
+[project.optional-dependencies]
+geo = [
+    "geopandas>=1.0.1",
+]
 
 [build-system]
 requires = [
@@ -25,20 +32,19 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["package_name"]
+packages = ["mpljourney"]
 
 [tool.uv.sources]
-package_name = { workspace = true }
+mpljourney = { workspace = true }
 
 [dependency-groups]
 dev = [
+    "pandas>=2.3.1",
+    "polars>=1.31.0",
     "pre-commit>=4.2.0",
     "pytest>=8.3.5",
     "ruff>=0.11.13",
-    "mkdocs-material>=9.6.9",
-    "mkdocstrings-python>=1.16.5",
-    "coverage>=7.9.1",
-    "genbadge>=1.1.2",
+    "ty>=0.0.1a14",
 ]
 quarto = [
     "jupyter>=1.1.1",
@@ -48,7 +54,7 @@ quarto = [
 ]
 
 [project.urls]
-Homepage = "https://your_name.github.io/package_name/"
-Issues = "https://github.com/your_name/package_name/issues"
-Documentation = "https://your_name.github.io/package_name/"
-Repository = "https://github.com/your_name/package_name"
+Homepage = "https://JosephBARBIERDARNAL.github.io/mpljourney/"
+Issues = "https://github.com/JosephBARBIERDARNAL/mpljourney/issues"
+Documentation = "https://JosephBARBIERDARNAL.github.io/mpljourney/"
+Repository = "https://github.com/JosephBARBIERDARNAL/mpljourney"
