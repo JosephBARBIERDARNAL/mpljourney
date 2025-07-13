@@ -1,3 +1,5 @@
+
+
 <!-- Automatically generated, uses README.qmd to modify README.md -->
 
 # `mpljourney`
@@ -17,7 +19,7 @@ those datasets too.
 
 To load of one the available datasets:
 
-```python
+``` python
 from mpljourney import load_dataset
 
 df = load_dataset("accident-london")
@@ -27,10 +29,18 @@ By default it loads it as a `pandas` dataframe, but it can also be any
 of: "polars", "cudf", "pyarrow", "modin", assuming you have the
 associated library installed on your machine:
 
-```python
+``` python
 from mpljourney import load_dataset
 
 df = load_dataset("accident-london", output_format="polars")
+```
+
+<br>
+
+Install with:
+
+``` shell
+pip install mpljourney
 ```
 
 <br><br>

@@ -31,6 +31,14 @@ from mpljourney import load_dataset
 df = load_dataset("accident-london", output_format="polars")
 ```
 
+<br>
+
+Install with:
+
+```shell
+pip install mpljourney
+```
+
 <br><br>
 
 ## All datasets
