@@ -7,7 +7,7 @@ from: markdown-smart
 
 # `mpljourney`
 
-A collection of cool datasets distributed in a Python package.
+A collection of cool datasets for Python.
 
 Those datasets are primarly used for [matplotlib-journey.com](https://www.matplotlib-journey.com/), an online course to master data visualization with Python, but anyone can use those datasets too.
 

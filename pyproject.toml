@@ -1,6 +1,6 @@
 [project]
 name = "mpljourney"
-description = "A collection of cool datasets distributed in a Python package."
+description = "A collection of cool datasets for Python."
 version = "0.1.0"
 license = "MIT"
 license-files = ["LICENSE"]
