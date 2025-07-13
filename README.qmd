@@ -1,0 +1,53 @@
+---
+format: gfm
+---
+
+<!-- Automatically generated, uses README.qmd to modify README.md -->
+
+# `mpljourney`
+
+A collection of cool datasets distributed in a Python package.
+
+Those datasets are primarly used for [matplotlib-journey.com](https://www.matplotlib-journey.com/), an online course to master data visualization with Python, but anyone can use those datasets too.
+
+To load of one the available datasets:
+
+```python
+from mpljourney import load_dataset
+
+df = load_dataset("accident-london")
+```
+
+By default it loads it as a `pandas` dataframe, but it can also be any of: "polars", "cudf", "pyarrow", "modin", assuming you have the associated library installed on your machine:
+
+```python
+from mpljourney import load_dataset
+
+df = load_dataset("accident-london", output_format="polars")
+```
+
+<br><br>
+
+## All datasets
+
+```{python}
+# | echo: false
+
+from mpljourney import load_dataset, ALL_DATASETS
+from great_tables import GT, md
+
+for dataset_name in ALL_DATASETS:
+    df = load_dataset(dataset_name).head(3)
+    if "geometry" in df.columns:
+        message = f"'{dataset_name}' is a geo dataset. The `geometry` column is hidden here to make the table snippet readable."
+        df = df.drop(columns="geometry")
+    else:
+        message = ""
+
+    print("\n\n\n")
+    print(message)
+    gt_table = GT(df).tab_header(
+        title=dataset_name, subtitle=md(f"Load with: `load_dataset('{dataset_name}')`")
+    )
+    gt_table.show()
+```

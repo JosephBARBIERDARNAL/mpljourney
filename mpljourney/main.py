@@ -33,7 +33,7 @@ ALL_DATASETS: list[str] = [
     "world",
 ]
 
-_GEOJSON_DATASETS: set[str] = {"london", "newyork", "us-counties", "world"}
+_GEOJSON_DATASETS: list[str] = ["london", "newyork", "us-counties", "world"]
 
 
 def _find_file_url(dataset_name: str) -> str:
@@ -71,7 +71,7 @@ def load_dataset(dataset_name: str, output_format: str = "pandas"):
         try:
             import geopandas as gpd
 
-            df = gpd.read_file(dataset_url)
+            df: gpd.GeoDataFrame = gpd.read_file(dataset_url)
         except ModuleNotFoundError:
             raise ModuleNotFoundError(
                 "You must have `geopandas` installed to use geo datasets. "
@@ -83,8 +83,3 @@ def load_dataset(dataset_name: str, output_format: str = "pandas"):
         raise ValueError("Unsupported file type.")
 
     return df
-
-
-load_dataset("accident-london")
-
-load_dataset("world")
