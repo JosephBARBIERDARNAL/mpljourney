@@ -4,7 +4,7 @@ description = "A collection of cool datasets for Python."
 version = "0.1.0"
 license = "MIT"
 license-files = ["LICENSE"]
-keywords = ["datasets", "data", "exploration", "matplotlib", "journey"]
+keywords = ["datasets", "data", "exploration", "matplotlib", "journey", "visualization", "analysis"]
 authors = [
   { name="Joseph Barbier", email="joseph.barbierdarnal@mail.com" },
 ]
@@ -59,7 +59,7 @@ quarto = [
 ]
 
 [project.urls]
-Homepage = "https://JosephBARBIERDARNAL.github.io/mpljourney/"
+Homepage = "https://github.com/JosephBARBIERDARNAL/mpljourney"
 Issues = "https://github.com/JosephBARBIERDARNAL/mpljourney/issues"
-Documentation = "https://JosephBARBIERDARNAL.github.io/mpljourney/"
+Documentation = "https://github.com/JosephBARBIERDARNAL/mpljourney"
 Repository = "https://github.com/JosephBARBIERDARNAL/mpljourney"
