@@ -1,5 +1,6 @@
 ---
 format: gfm
+from: markdown-smart
 ---
 
 <!-- Automatically generated, uses README.qmd to modify README.md -->
@@ -9,6 +10,10 @@ format: gfm
 A collection of cool datasets distributed in a Python package.
 
 Those datasets are primarly used for [matplotlib-journey.com](https://www.matplotlib-journey.com/), an online course to master data visualization with Python, but anyone can use those datasets too.
+
+> Note that `mpljourney` does not embed datasets directly with it, but fetches them from a [separate repo](https://github.com/JosephBARBIERDARNAL/data-matplotlib-journey).
+
+<br>
 
 To load of one the available datasets:
 
@@ -32,6 +37,7 @@ df = load_dataset("accident-london", output_format="polars")
 
 ```{python}
 # | echo: false
+# | output: asis
 
 from mpljourney import load_dataset, ALL_DATASETS
 from great_tables import GT, md
@@ -44,10 +50,13 @@ for dataset_name in ALL_DATASETS:
     else:
         message = ""
 
-    print("\n\n\n")
-    print(message)
+    print(f"## {dataset_name}\n")
+    print(message, "\n")
+    print("\n")
     gt_table = GT(df).tab_header(
         title=dataset_name, subtitle=md(f"Load with: `load_dataset('{dataset_name}')`")
     )
-    gt_table.show()
+    gt_table.save(f"img/{dataset_name}.png", web_driver="firefox")
+    print(f"![](img/{dataset_name}.png)")
+    print("\n")
 ```
